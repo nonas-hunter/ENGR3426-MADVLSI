@@ -1,0 +1,25 @@
+magic
+tech sky130A
+timestamp 1694405114
+<< locali >>
+rect 0 60 20 80
+rect 455 60 475 80
+rect 0 0 20 20
+<< metal1 >>
+rect 0 255 20 345
+rect 0 100 20 190
+use inverter  inverter_0 ~/Documents/miniproject_01/layout
+timestamp 1694394426
+transform 1 0 440 0 1 120
+box -170 -80 35 250
+use nand2  nand2_0
+timestamp 1694404404
+transform 1 0 140 0 1 300
+box -140 -300 130 70
+<< labels >>
+rlabel locali 0 70 0 70 7 A
+rlabel locali 0 10 0 10 7 B
+rlabel locali 475 70 475 70 3 Y
+rlabel metal1 0 305 0 305 7 VP
+rlabel metal1 0 145 0 145 7 VN
+<< end >>

@@ -1,0 +1,21 @@
+* NGSPICE file created from and2.ext - technology: sky130A
+
+.subckt inverter A Y VP VN
+X0 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X1 Y A VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt nand2 A B Y VP VN
+X0 Y B a_n10_n410# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.125 ps=1.25 w=1 l=0.15
+X1 a_n10_n410# A VN VN sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X2 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X3 VP B Y VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+.ends
+
+
+* Top level circuit and2
+
+Xinverter_0 nand2_0/Y Y VP VN inverter
+Xnand2_0 A B nand2_0/Y VP VN nand2
+.end
+
