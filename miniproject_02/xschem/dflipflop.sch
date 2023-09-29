@@ -60,17 +60,17 @@ lab=CLK}
 N -290 150 -260 150 {
 lab=CLK}
 N -50 -180 -50 -120 {
-lab=VP}
+lab=VDD}
 N -290 -180 160 -180 {
-lab=VP}
+lab=VDD}
 N -190 -180 -190 -120 {
-lab=VP}
+lab=VDD}
 N 90 120 90 180 {
-lab=VN}
+lab=#net5}
 N 230 120 230 180 {
-lab=VN}
+lab=#net5}
 N -290 180 230 180 {
-lab=VN}
+lab=#net5}
 C {madvlsi/pmos3.sym} -260 -50 3 0 {name=M1
 L=0.15
 W=1
@@ -286,5 +286,5 @@ C {devices/ipin.sym} -290 -50 0 0 {name=p1 lab=D}
 C {devices/opin.sym} 270 -50 0 0 {name=p3 lab=Q}
 C {devices/opin.sym} 270 50 0 0 {name=p4 lab=Qn}
 C {devices/iopin.sym} -290 150 2 0 {name=p5 lab=CLK}
-C {devices/iopin.sym} -290 -180 2 0 {name=p6 lab=VP}
-C {devices/iopin.sym} -290 180 2 0 {name=p7 lab=VN}
+C {madvlsi/vdd.sym} -290 -180 0 0 {name=l1 lab=VDD}
+C {madvlsi/gnd.sym} -290 180 0 0 {name=l2 lab=GND}
