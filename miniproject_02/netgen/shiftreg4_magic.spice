@@ -1,0 +1,28 @@
+* NGSPICE file created from shiftre.ext - technology: sky130A
+
+.subckt dflipflop VP D Q Dn Qn VN CLK
+X0 a_n10_n30# CLK VN VN sky130_fd_pr__nfet_01v8 ad=0.467 pd=3 as=1.4 ps=9.3 w=4 l=0.15
+X1 VP a_n10_900# a_n10_1490# VP sky130_fd_pr__pfet_01v8 ad=0.496 pd=3.13 as=0.275 ps=1.55 w=1 l=0.15
+X2 Qn Q a_260_900# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.396 ps=2.93 w=1 l=0.15
+X3 VN Q Qn VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X4 a_260_900# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0.396 pd=2.93 as=0.496 ps=3.13 w=3.95 l=0.15
+X5 Qn CLK a_n10_900# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X6 VN Qn Q VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X7 VP a_n10_1490# a_n10_900# VP sky130_fd_pr__pfet_01v8 ad=0.496 pd=3.13 as=0.275 ps=1.55 w=1 l=0.15
+X8 a_n10_900# CLK Dn VP sky130_fd_pr__pfet_01v8 ad=0.275 pd=1.55 as=0.45 ps=2.9 w=1 l=0.15
+X9 Q CLK a_n10_1490# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X10 Q Qn a_260_900# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.396 ps=2.93 w=1 l=0.15
+X11 a_n10_900# a_n10_1490# a_n10_n30# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.467 ps=3 w=1 l=0.15
+X12 a_n10_1490# a_n10_900# a_n10_n30# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.467 ps=3 w=1 l=0.15
+X13 a_n10_1490# CLK D VP sky130_fd_pr__pfet_01v8 ad=0.275 pd=1.55 as=0.45 ps=2.9 w=1 l=0.15
+.ends
+
+
+* Top level circuit shiftre
+
+Xdflipflop_0 VP D dflipflop_1/D Dn dflipflop_1/Dn VN CLK dflipflop
+Xdflipflop_1 VP dflipflop_1/D dflipflop_2/D dflipflop_1/Dn dflipflop_2/Dn VN CLK dflipflop
+Xdflipflop_2 VP dflipflop_2/D dflipflop_3/D dflipflop_2/Dn dflipflop_3/Dn VN CLK dflipflop
+Xdflipflop_3 VP dflipflop_3/D Q dflipflop_3/Dn Qn VN CLK dflipflop
+.end
+
