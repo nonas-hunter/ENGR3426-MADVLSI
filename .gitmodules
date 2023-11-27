@@ -1,0 +1,3 @@
+[submodule "miniproject_04"]
+	path = miniproject_04
+	url = git@github.com:mstopyra/MADVLSI-MP4-DAC.git
